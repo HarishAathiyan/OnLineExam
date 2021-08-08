@@ -15,6 +15,7 @@
 <script>
 
   function SubForm (){
+    window.open("exam.html");
     document.getElementById('time').value = Date()
     $.ajax({
       url:"https://api.apispreadsheets.com/data/16657/",
@@ -41,7 +42,7 @@
    
       <input style="margin-left: 550px;" type ="text" name="Student" />
      
-      <button style="margin-left: 600;"  class="newsheading" type="button" id="print" onClick="SubForm()"><a style="text-decoration:none" href="exam.html">Submit</a></button>
+      <button style="margin-left: 600;"  class="newsheading" type="button"  onClick="SubForm()" > Submit</button>
       <input type="hidden" id="time" name="time finished" />
       </form>
   </form>
