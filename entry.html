@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="sourcecss.css">
+
+<head>
+  <title>Login Page</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<script>
+
+  function SubForm (){
+    document.getElementById('time').value = Date()
+    $.ajax({
+      url:"https://api.apispreadsheets.com/data/16657/",
+      type:"post",
+      data:$("#myForm").serializeArray(),
+      success: function(){
+        alert("Form Data Submitted :)")
+      },
+      error: function(){
+        alert("There was an error :(")
+      }
+    });
+
+  }
+</script>
+
+<body class="bodyweb">
+
+  <form id="myForm">
+    <h1 class="heading">Login</h1>
+
+    <h2 class="newsheading" id="nameofthestudent">Your Name</h2>
+    <form id="myForm">
+   
+      <input style="margin-left: 550px;" type ="text" name="Student" />
+     
+      <button style="margin-left: 600;"  class="newsheading" type="button" id="print" onClick="SubForm()"><a style="text-decoration:none" href="exam.html">Submit</a></button>
+      <input type="hidden" id="time" name="time finished" />
+      </form>
+  </form>
+
+</body>
+
+</html>
+

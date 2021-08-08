@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+            document.getElementById('time').value = Date()
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/16657/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<label>Student</label>
+		<input name="Student" />
+		<br/>
+		<label>Q1</label>
+		<input name="Q1" />
+		<br/>
+		<label>Q2</label>
+		<input name="Q2" />
+		<br/>
+		<label>Q3</label>
+		<input name="Q3" />
+		<br/>
+		<label>Q4</label>
+		<input name="Q4" />
+		<br/>
+		<label>Q5</label>
+		<input name="Q5" />
+		<br/>
+		<label>Q6</label>
+		<input name="Q6" />
+		<br/>
+		<label>Q7</label>
+		<input name="Q7" />
+		<br/>
+		<label>Q8</label>
+		<input name="Q8" />
+		<br/>
+		<label>Q9</label>
+		<input name="Q9" />
+		<br/>
+		<label>Q10</label>
+		<input name="Q10" />
+		<br/>
+		<label>time started</label>
+		<input name="time started" />
+		<br/>
+		<label >time finished</label>
+		<input id="time" name="time finished" />
+		<br/>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+</body>
+</html>

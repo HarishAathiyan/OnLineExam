@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <h3 id="here"></h3>
+ 
+  
+  <link rel="stylesheet" href="sourcecss.css">
+<head>
+
+<title>Biology Exam</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/16398/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+</head>
+<body class="bodyweb" >
+
+  <h1 class="heading">Vidian</h1>
+  <form id="myForm">
+    <label class="description">Which of the following is correct?</label>
+    <br/>
+    <p>
+    <input type="radio" id="a1" name="Q1" value="correct" />
+   <label class="description"> option 1 </label>
+  </p>
+    <p>
+    <input type="radio" id="a2" name="Q1" value="Wrong" />
+    <label class="description"> option 1 </label></p>
+    <p>
+    <input type="radio" id="a3" name="Q1" value="Wrong" />
+    <label class="description"> option 1 </label></p>
+    <p>
+    <input type="radio" id="a4" name="Q1" value="Wrong" />
+    <label class="description"> option 1 </label></p>
+
+    <br/>
+    <label>Which of the following is Wrong?</label>
+    <br/>
+    <p>
+      <input type="radio" id="a1" name="Q2" value="correct" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a2" name="Q2" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a3" name="Q2" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a4" name="Q2" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+    <br/>
+    <label>choose your favourite:</label>
+    <br/>
+    <p>
+      <input type="radio" id="a1" name="Q3" value="correct" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a2" name="Q3" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a3" name="Q3" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+      <p>
+      <input type="radio" id="a4" name="Q3" value="Wrong" />
+      <label class="description"> option 1 </label></p>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+  <button onclick="SubForm()">Submit </button>
+</body>
+
+<script>
+  window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    document.getElementById('here').innerHTML = data.name;
+}
+
+</script>
+</html>

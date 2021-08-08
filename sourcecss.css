@@ -1,0 +1,79 @@
+
+
+.heading {
+    color: #f3ca20 ;
+     animation-name: example;
+     animation-duration: 4s;
+   text-align: center;
+   font-size: 50px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+   
+   }
+   .newsheading{
+   color: #f3ca20;
+   background-color: #322e2f;
+   text-align: center;
+   }
+   @keyframes example {
+     from {color: red;}
+     to {color: yellow;}
+   }
+   
+   @keyframes example1 {
+     from {background-color: rgb(176, 27, 196);}
+     to {background-color: rgb(231, 231, 12);}
+     from {color: rgb(231, 231, 12);}
+     to {color:rgb(176, 27, 196);}
+   }
+   /* The navbar container */
+   .topnav {
+     overflow: hidden;
+     background-color: rgb(8, 5, 7);
+   }
+   
+   /* Navbar links */
+   .topnav a {
+     float: left;
+     display: block;
+     color: #f3ca20;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: rgb(18, 157, 161);
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   
+   /* Links - change color on hover */
+   .topnav a:hover {
+   animation-name: example1;
+   animation-duration: 0.5s;
+     background-color: rgb(231, 231, 12);
+     color: rgb(230, 15, 15);
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .bodyweb {
+   background-color: #322e2f;
+   
+   }   
+   .footer {
+     padding: 20px;
+     text-align: center;
+     background: #ddd;
+     margin-top: 20px;
+   }
+   .endmessage{
+   color: rgb(253, 160, 38);
+   text-align: center;    
+   }
+   .description{
+    color: #12a4d9;
+    font-size: 20px;   
+    text-decoration: none;
+   }
+   
+   .webproductsheading{
+   color: #f3ca20;
+   font: bold;
+   
+   }
+   
